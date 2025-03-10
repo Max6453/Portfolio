@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/CSS/main.css">
+    <link rel="stylesheet" href="./src/CSS/side.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="https://kit.fontawesome.com/428684f03b.js" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+
+    <style>
+      .main-color{
+      background-color: #FFFFFF ;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='507' height='507' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%230082FF' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%2300F0FF'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+   }
+    </style>
+</head>
+<body>
+
+<!--nav-->
+<div data-dial-init class="fixed top-6 end-6 group z-50">
+   <button type="button" data-dial-toggle="speed-dial-menu-top-right" aria-controls="speed-dial-menu-top-right" aria-expanded="false" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+      <svg class="w-5 h-5 transition-transform group-hover:rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+     </svg>
+       <span class="sr-only">Open actions menu</span>
+   </button>
+   <div id="speed-dial-menu-top-right" class="flex flex-col items-center hidden mt-4 space-y-2">
+       <button type="button" data-tooltip-target="tooltip-share" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-xs dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+         <i class="fa-solid fa-user"></i>
+       </button>
+       <div id="tooltip-share" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+           About
+           <div class="tooltip-arrow" data-popper-arrow></div>
+       </div>
+       <button type="button" data-tooltip-target="tooltip-print" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-xs dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+         <i class="fa-solid fa-code"></i>
+           <span class="sr-only">Projects</span>
+       </button>
+       <div id="tooltip-print" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+           Projects
+           <div class="tooltip-arrow" data-popper-arrow></div>
+       </div>
+       <button type="button" data-tooltip-target="tooltip-download" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-xs dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+         <i class="fa-solid fa-comment-nodes"></i>
+           <span class="sr-only">Skills</span>
+       </button>
+       <div id="tooltip-download" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+           Skills
+           <div class="tooltip-arrow" data-popper-arrow></div>
+       </div>
+       <button type="button" data-tooltip-target="tooltip-copy" data-tooltip-placement="left" class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 dark:hover:text-white shadow-xs dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400">
+         <i class="fa-solid fa-qrcode"></i>
+           <span class="sr-only">Contact</span>
+       </button>
+       <div id="tooltip-copy" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+           Contact
+           <div class="tooltip-arrow" data-popper-arrow></div>
+       </div>
+   </div>
+</div>
+
+<a href="./index.html" class="absolute z-50 pl-5 pt-5">
+   <img src="./src/Assets/Frame 1.jpg">
+</a> 
+
+<!--Main-->
+<div class="main-color relative isolate overflow-hidden bg-white py-24 sm:py-32 text-center pr-12 h-screen">
+   <div class="mx-auto max-w-7xl px-6 lg:px-8">
+     <div class="mx-auto lg:mx-0 pt-44">
+       <h2 class="text-5xl text-blue-500 font-semibold tracking-tight sm:text-7xl">WELCOME</h2>
+       <p class="mt-8 text-lg font-medium text-pretty sm:text-xl/8 text-cyan-400">
+         Hello I'm Max. Nice to meet you.</p>
+     </div>
+   </div>
+</div>
+
+   <div id="About" class="overflow-hidden bg-blue-500 py-24 sm:py-32 relative text-center h-screen border border-cyan-400">
+      <div class="mx-auto px-6 lg:px-8">
+        <div class="mx-auto ">
+          <div class="lg:pt-4 pr-10">
+              <p class="mt-6 text-white text-xl">
+               My priority is designing simple websites and networks and I love every second of it.
+              </p>
+              <p class="mt-6 text-white text-xl">
+               I'm Currently am student in secondary vocational school of transport in Žilina, Slovakia.
+               My course is focused mainly on mechanical engineering so i can repair cars or calculate hydrodynamic equations :).
+              </p>
+              <p class="mt-6 text-white text-xl">
+               My journey as developer began 4 years ago as first simple codes in python. I coded a simple telemetry from Formula 1 car using Fastf1 library.
+               From that point a started to make more projects and telemetries.
+              </p>
+              <p class="mt-6 text-white text-xl">
+               My biggest passion is motorsport. I like to watch Formula 1, WEC, sometimes MotoGP, Rallye and more.
+               And my biggest happiness is when i can combine my favourite things.
+              </p>
+              <p class="mt-6 text-white text-xl">
+               I even have understandings in networks and have cisco certificates.
+              </p>
+              <p class="mt-6 text-white text-xl">
+               I'm quite confident and i love collaboration with people and working together on projects.
+              </p>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!--Skills-->
+<div id="Skills" class="flex gap-20 pl-14 pt-10 h-screen max-md:grid max-md:grid-cols-2 max-md:pl-0">
+                   <!--skill card 1-->
+   <div class="max-w-sm bg-white border border-blue-600 rounded-lg shadow-sm h-96">
+      <div class="p-5 gap-y-4">
+            <h4 class="mb-2 text-3xl font-bold tracking-tight text-blue-500">
+            Languages
+            </h4>
+         <p class="mb-3 font-normal text-blue-500">
+            I tried many languages in my life and carrer
+         </p>
+         <p class="mb-3 font-normal text-blue-500">            
+         <ul class="max-w-md space-y-1 text-blue-500 list-disc list-inside">
+            <li>Slovak - Native</li>
+            <li>English - B1</li>
+            <li>German - A1</li>
+         </ul>
+         <hr class="text-blue-500 p-1 pt-1"> 
+          <ul class="max-w-md space-y-1 text-blue-500 list-disc list-inside">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+            <li>Python</li>
+            <li>Bash</li>
+         </ul>
+         </p>
+      </div>
+   </div>
+            <!--skill card 2-->
+
+            <div class="max-w-sm bg-white border border-blue-600 rounded-lg shadow-sm h-96">
+               <div class="p-5 gap-y-4">
+                     <h4 class="mb-2 text-3xl font-bold tracking-tight text-blue-500">
+                     Softwares
+                     </h4>
+                  <p class="mb-3 font-normal text-blue-500">
+                  </p>
+                  <p class="mb-3 font-normal text-blue-500">            
+                  <ul class="max-w-md space-y-1 text-blue-500 list-disc list-inside">
+                     <li>Github</li>
+                     <li>Git</li>
+                     <li>Docker</li>
+                     <li>Vscode</li>
+                     <li>Figma</li>
+                     <li>Cisco Packet Tracer</li>
+                     <li>MySQL</li>
+                     <li>MongoDB</li>
+                     <li>PostgreSQL</li>
+                     <li>Blender</li>
+                     <li>Adobe Photoshop</li>
+                  </ul>
+                  </p>
+               </div>
+            </div>
+
+            <!--skill card 3-->
+            <div class="max-w-sm bg-white border border-blue-600 rounded-lg shadow-sm h-96">
+               <div class="p-5 gap-y-4">
+                     <h4 class="mb-2 text-3xl font-bold tracking-tight text-blue-500">
+                        Libraries
+                     </h4>
+                  <p class="mb-3 font-normal text-blue-500">            
+                     <ul class="max-w-md space-y-1 text-blue-500 list-disc list-inside">
+                        <li>React</li>
+                        <li>Next.js</li>
+                        <li>Node.js</li>
+                        <li>Jquery</li>
+                     </ul>
+                  </p>
+               </div>
+            </div>
+
+            <!--skill card 4-->
+
+            <div class="max-w-sm bg-white border border-blue-600 rounded-lg shadow-sm h-96">
+               <div class="p-5 gap-y-4">
+                     <h4 class="mb-2 text-3xl font-bold tracking-tight text-blue-500">
+                     Abilities
+                     </h4>
+                  <p class="mb-3 font-normal text-blue-500">
+                     I'm helpfull to people and happy to collaborate on projects. I'm: 
+                  </p>
+                  <p class="mb-3 font-normal text-blue-500">            
+                  <ul class="max-w-md space-y-1 text-blue-500 list-disc list-inside">
+                     <li>Flexible</li>
+                     <li>Team Worker</li>
+                     <li>Hard worker</li>
+                     <li>consistent</li>
+                     <li>reliable</li>
+                  </ul>
+                  </p>
+               </div>
+            </div>
+</div>
+
+</body>
+</html>
